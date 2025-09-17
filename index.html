@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis 15 Años - Dayana Aguilar</title>
+    <link rel="icon" type="image/png" href="images/icono.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mis 15 Años - Dayana Aguilar" />
+    <meta property="og:description" content="Mis 15 Años - Dayana Aguilar✨" />
+    <meta
+      property="og:image"
+      content="https://mis15-dayana.rf.gd/images/Logo.jpg
+      "
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mis15-dayana.rf.gd/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mis15-Dayana Aguilar" />
+    <meta property="og:locale" content="es_PE" />
+  </head>
+  <body>
+    <!-- ★★★ INICIO DEL PRELOADER ★★★ -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <!-- ★★★ FIN DEL PRELOADER ★★★ -->
+
+    <!-- 1. Reproductor de Audio Oculto (se controla con JavaScript) -->
+    <audio id="background-music" loop>
+      <source src="audio/musicc.mp3" type="audio/mpeg" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="invitation-container">
+      <!-- 2. Controles Visuales del Reproductor -->
+      <!-- El resto de tu invitación permanece igual -->
+      <div class="card-interactive">
+        <img
+          src="images/invitaciones-1.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <a target="_blank" class="buterfly3"></a>
+      </div>
+
+      <div class="card-interactive">
+        <img
+          src="images/invitacioones-2.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <!-- Luciérnagas -->
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+
+        <!-- NUEVO CÓDIGO HTML -->
+        <div class="music-player">
+          <!-- Contenedor para la parte superior: botón y barra -->
+          <div class="player-controls">
+            <button id="play-pause-btn" class="player-button">
+              <img
+                id="play-pause-icon"
+                src="images/play.png"
+                alt="Play/Pause"
+              />
+            </button>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+        <a target="_blank" class="buterfly4"></a>
+      </div>
+      <!-- NUEVA TARJETA CON invitaciones-7.webp -->
+      <div class="card-interactive">
+        <img
+          src="images/invitacioones-7.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <!-- Aquí puedes añadir más elementos si luego quieres (botón, contador, etc.) -->
+        <a target="_blank" class="buterfly7"></a>
+      </div>
+
+      <div class="card-interactive">
+        <img
+          src="images/invitacionees-3.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <div id="countdown">
+          <div class="time-block">
+            <span id="days">00</span><small>Días</small>
+          </div>
+          <div class="time-block">
+            <span id="hours">00</span><small>Horas</small>
+          </div>
+          <div class="time-block">
+            <span id="minutes">00</span><small>Minutos</small>
+          </div>
+          <div class="time-block">
+            <span id="seconds">00</span><small>Segundos</small>
+          </div>
+        </div>
+        <a target="_blank" class="buterfly5"></a>
+        <a
+          href="https://maps.app.goo.gl/zry2potPTuA496QC8"
+          target="_blank"
+          class="map-buttonn"
+        >
+          Ir al Mapa
+        </a>
+      </div>
+
+      <div class="card-interactive">
+        <img
+          src="images/invitacionnes-4.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <a target="_blank" class="buterfly1"></a>
+      </div>
+
+      <div class="card-interactive">
+        <img
+          src="images/invitacionnes-5.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <a target="_blank" class="buterfly2"></a>
+      </div>
+
+      <div class="card-interactive">
+        <img
+          src="images/invitacioness-6.webp"
+          alt="Detalles del evento"
+          class="card-image"
+        />
+        <a
+          href="https://wa.me/51945649857?text=Hola!%20Confirmo%20mi%20asistencia%20a%20tus%2015%20a%C3%B1os."
+          target="_blank"
+          class="map-buttonn2"
+        >
+          Clic Aquí
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. Carga de los scripts por separado -->
+    <script src="contador.js" defer></script>
+    <script src="music-player.js" defer></script>
+
+    <!-- ★★★ SCRIPT DEL PRELOADER (DEBE IR AL FINAL) ★★★ -->
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("preloader-hidden");
+      });
+    </script>
+  </body>
+</html>

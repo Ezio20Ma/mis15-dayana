@@ -1,0 +1,419 @@
+/* Estilos generales y fuentes */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e9ebee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal de la invitación */
+.invitation-container {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para TODAS las imágenes */
+.card-image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Contenedor interactivo (marco de referencia) */
+.card-interactive {
+  position: relative;
+}
+
+/* --- ESTILOS DEL CONTADOR REGRESIVO --- */
+#countdown {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-48%);
+  width: 90%;
+  display: flex;
+  justify-content: center; /* Centra el grupo de bloques */
+  gap: 10px; /* Define el espacio ENTRE cada bloque */
+  align-items: center;
+  text-align: center;
+  color: rgb(3, 56, 3);
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-block span {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Impact, Arial, sans-serif; /* Fuente Impact */
+  color: rgb(3, 56, 3); /* Nuevo color azul */
+}
+
+.time-block small {
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: -5px;
+}
+
+/* --- ESTILOS DE LOS BOTONES Y ELEMENTOS DECORATIVOS --- */
+.map-buttonn {
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+  transform: translateX(-50%);
+  background-image: url("images/boton1.webp");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5em;
+  white-space: nowrap;
+  text-align: center;
+  padding: 18px 55px;
+  transition: transform 0.2s ease;
+}
+
+.map-buttonn:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.map-buttonn2 {
+  position: absolute;
+  bottom: 50%;
+  left: 26%;
+  transform: translateX(-50%);
+  background-image: url("images/boton2.webp");
+  background-size: 80% 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.5em;
+  white-space: nowrap;
+  text-align: center;
+  padding: 18px 55px;
+  transition: transform 0.2s ease;
+}
+
+.map-buttonn2:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.buterfly3 {
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-image: url("images/mariposa-1.gif");
+  background-size: contain; /* se ve toda la mariposa */
+  background-repeat: no-repeat; /* evita repeticiones */
+  background-position: center; /* la centra */
+}
+
+.buterfly4 {
+  position: absolute;
+  bottom: 1%;
+  left: 60%;
+  height: 5%;
+  background-image: url("images/mariposa-3.gif");
+  background-size: 100% 100%;
+  padding: 18px 55px;
+}
+
+.buterfly5 {
+  position: absolute;
+  bottom: 60%;
+  left: 27%;
+  height: 5%;
+  background-image: url("images/mariposa-3.gif");
+  background-size: 100% 100%;
+  padding: 18px 55px;
+}
+
+.buterfly1 {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  height: 5%;
+  background-image: url("images/mariposa-1.gif");
+  background-size: 100% 100%;
+  padding: 18px 55px;
+}
+
+.buterfly2 {
+  position: absolute;
+  bottom: 50%;
+  left: 36%;
+  height: 5%;
+  background-image: url("images/mariposa-2.gif");
+  background-size: 100% 100%;
+  padding: 18px 55px;
+  transform: scale(2); /* 2 = el doble de grande */
+  transform-origin: center; /* se agranda desde el centro */
+}
+
+.buterfly6 {
+  position: absolute;
+  bottom: 82%;
+  left: 60%;
+  height: 5%;
+  background-image: url("images/butterfly6.gif");
+  background-size: 100% 100%;
+  padding: 18px 55px;
+}
+
+/* ======================================================= */
+/* ===  ESTILOS ACTUALIZADOS PARA REPRODUCTOR DE MÚSICA === */
+/* ======================================================= */
+
+.music-player {
+  /* 1. Posicionamiento absoluto sobre la imagen */
+  position: absolute;
+  top: 2%; /* Ajusta este valor para subir o bajar el reproductor */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%; /* Ancho del reproductor sobre la imagen */
+
+  /* 2. Usamos flexbox en modo columna para apilar los elementos */
+  display: flex;
+  flex-direction: column; /* <-- La clave del cambio: apila los elementos verticalmente */
+  align-items: center; /* <-- Centra todo horizontalmente */
+  gap: 8px; /* Espacio entre la barra y el texto */
+
+  /* 3. Limpiamos estilos anteriores */
+  padding: 0;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+/* Nuevo contenedor para el botón y la barra */
+.player-controls {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho del music-player */
+  gap: 15px;
+}
+
+.player-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.player-button img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: rgb(3, 56, 3);
+  position: relative;
+  border-radius: 3px;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* --- ESTILOS DEL PRELOADER --- */
+
+#preloader {
+  position: fixed; /* Se queda fijo en la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Un fondo blanco, puedes cambiarlo */
+  z-index: 9999; /* Se asegura de que esté por encima de todo */
+  display: flex; /* Para centrar el contenido fácilmente */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.75s ease, visibility 0.75s ease; /* Transición suave */
+}
+
+/* Animación de un spinner simple (círculo que gira) */
+.spinner {
+  border: 8px solid #f3f3f3; /* Gris claro */
+  border-top: 8px solid rgb(3, 56, 3); /* Azul */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Si prefieres usar tu logo en lugar del spinner, usa este CSS */
+/*
+#preloader img {
+    width: 150px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Clase que usaremos con JavaScript para ocultar el preloader */
+.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* === ANIMACIÓN DE LUCIÉRNAGAS === */
+.firefly {
+  position: absolute;
+  top: 30%;
+  left: -50px; /* Empiezan fuera de la imagen */
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 150, 1) 40%,
+    rgba(255, 255, 150, 0) 70%
+  );
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 10px 4px rgba(255, 255, 150, 0.8);
+  animation: fly 8s linear infinite;
+}
+
+/* Animación del vuelo */
+@keyframes fly {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateX(150px) translateY(-40px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(300px) translateY(20px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateX(450px) translateY(-30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(600px) translateY(0);
+    opacity: 0.6;
+  }
+}
+
+/* Variaciones para que no se vean iguales */
+.firefly:nth-child(2) {
+  animation-duration: 10s;
+  top: 40%;
+  animation-delay: 2s;
+}
+
+.firefly:nth-child(3) {
+  animation-duration: 12s;
+  top: 50%;
+  animation-delay: 4s;
+}
+
+/* === ✨ ANIMACIÓN DE CHISPAS DORADAS === */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* no bloquea clics */
+  overflow: hidden;
+}
+
+.sparkles::before,
+.sparkles::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, gold 40%, transparent 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+.sparkles::after {
+  animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(-100px, -120px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(120px, 80px) scale(0.7);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+}
