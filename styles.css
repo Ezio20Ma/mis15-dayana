@@ -34,7 +34,7 @@ body {
 /* --- ESTILOS DEL CONTADOR REGRESIVO --- */
 #countdown {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
   transform: translateX(-48%);
   width: 90%;
